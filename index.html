@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+
+Number1 <input type="text" id="num1"><br><br>
+Number2 <input type="text" id="num2"><br><br>
+
+<select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="x">*</option>
+    <option value="/">/</option>
+</select>
+
+
+
+<button onclick="sum()">=</button>
+<br><br>
+Result <input type="text" id="res"><br><br>
+
+    
+
+<script>
+    function sum(){
+
+var first =+document.getElementById("num1").value;
+var second =+ document.getElementById("num2").value
+var operator=document.getElementById("operator").value
+
+
+
+
+if(operator==="+"){
+    document.getElementById("res").value=first+second
+}
+else if(operator==="-"){
+    document.getElementById("res").value=first-second
+}
+else if(operator==="x"){
+    document.getElementById("res").value=first*second
+}
+else if(operator==="/"){
+    document.getElementById("res").value=first/second
+}else{
+    alert("This is not a number")
+}
+
+
+
+
+
+}
+</script>
+
+
+</body>
+</html>
